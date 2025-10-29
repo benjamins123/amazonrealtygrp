@@ -9,16 +9,28 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/benjamins123/amazonrealtygrp/7387b668d8da20b44bc74be931c4715804faf11f/image%20(4).png">
 
+  <!-- Open Graph Meta Tags for Social Previews -->
+  <meta property="og:title" content="Amazon Realty Group - Expert Property Management in New York City">
+  <meta property="og:description" content="Hands-on, dedicated service since 2008. Personalized property management for NYC rentals, commercial spaces, and condominiums.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/benjamins123/amazonrealtygrp/7387b668d8da20b44bc74be931c4715804faf11f/image%20(4).png">
+  <meta property="og:url" content="https://benjamins123.github.io/amazonrealtygrp/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card Meta Tags (for Twitter/X) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Amazon Realty Group - Expert Property Management in New York City">
+  <meta name="twitter:description" content="Hands-on, dedicated service since 2008. Personalized property management for NYC rentals, commercial spaces, and condominiums.">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/benjamins123/amazonrealtygrp/7387b668d8da20b44bc74be931c4715804faf11f/image%20(4).png">
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --primary-purple: #6a1b9a;  /* Rich purple for accents */
-      --light-purple: #9c27b0;    /* Hover/light variation */
-      --black: #0a0a0a;           /* Deep, warm black */
-      --silver: #d4d4d4;          /* Metallic silver for borders */
-      --light-silver: #f8f8f8;    /* Soft silver for backgrounds */
+      --violet: #6a1b9a;
+      --black: #000000;
+      --silver: #e0e0e0;
+      --light: #f8f9fa;
       --transition: all 0.2s ease;
     }
 
@@ -35,8 +47,8 @@
       background: #fff;
     }
 
-    a { color: var(--primary-purple); text-decoration: none; }
-    a:hover { color: var(--light-purple); }
+    a { color: var(--violet); text-decoration: none; }
+    a:hover { color: #7e57c2; }
 
     .container {
       width: 90%;
@@ -80,7 +92,7 @@
     }
 
     .logo span {
-      color: var(--primary-purple);
+      color: var(--violet);
     }
 
     /* Desktop Nav */
@@ -139,179 +151,4 @@
 
     /* === HERO === */
     .hero {
-      background: linear-gradient(rgba(10,10,10,0.75), rgba(10,10,10,0.75)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
-      color: white;
-      text-align: center;
-      padding: 4.5rem 1rem 3rem;
-    }
-
-    .hero h1 {
-      font-size: 2.1rem;
-      margin-bottom: 0.6rem;
-      font-weight: 700;
-    }
-
-    .hero p {
-      font-size: 1.05rem;
-      max-width: 700px;
-      margin: 0 auto 1.2rem;
-      opacity: 0.95;
-    }
-
-    .btn {
-      display: inline-block;
-      background: var(--primary-purple);
-      color: white;
-      padding: 0.7rem 1.6rem;
-      border-radius: 4px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      transition: var(--transition);
-    }
-
-    .btn:hover {
-      background: var(--light-purple);
-      transform: translateY(-1px);
-    }
-
-    /* === SECTIONS === */
-    section {
-      padding: 3rem 0;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 1.8rem;
-      margin-bottom: 2rem;
-      color: var(--black);
-      position: relative;
-    }
-
-    .section-title:after {
-      content: '';
-      width: 40px;
-      height: 2px;
-      background: var(--primary-purple);
-      display: block;
-      margin: 0.6rem auto 0;
-    }
-
-    /* About */
-    .about-grid {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .about-text p {
-      margin-bottom: 1rem;
-      font-size: 1rem;
-      color: #444;
-    }
-
-    /* Services */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.2rem;
-    }
-
-    .service-card {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 6px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.04);
-      border: 1px solid var(--silver);
-      transition: var(--transition);
-    }
-
-    .service-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-    }
-
-    .service-card h3 {
-      color: var(--primary-purple);
-      margin-bottom: 0.7rem;
-      font-size: 1.1rem;
-    }
-
-    .service-card ul {
-      list-style: none;
-      font-size: 0.9rem;
-      color: #555;
-    }
-
-    .service-card li {
-      margin-bottom: 0.3rem;
-      position: relative;
-      padding-left: 1rem;
-    }
-
-    .service-card li:before {
-      content: "•";
-      color: var(--primary-purple);
-      position: absolute;
-      left: 0;
-      font-weight: bold;
-    }
-
-    /* Portfolio */
-    .portfolio {
-      background: var(--light-silver);
-    }
-
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-    }
-
-    .portfolio-item {
-      background: white;
-      padding: 1rem;
-      border-radius: 6px;
-      text-align: center;
-      font-size: 0.9rem;
-      font-weight: 500;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
-      border: 1px solid var(--silver);
-    }
-
-    /* Contact */
-    .contact {
-      background: var(--black);
-      color: white;
-    }
-
-    .contact .section-title { color: white; }
-    .contact .section-title:after { background: var(--primary-purple); }
-
-    /* Footer */
-    footer {
-      background: var(--black);
-      color: #999;
-      text-align: center;
-      padding: 1.2rem 0;
-      font-size: 0.8rem;
-    }
-
-    /* === MOBILE === */
-    @media (max-width: 768px) {
-      header { height: 48px; }
-      .logo { font-size: 1rem; }
-      .logo img { height: 28px; margin-right: 6px; }
-      .nav-desktop { display: none; }
-      .menu-toggle { display: block; }
-      .hero { padding: 3rem 1rem 2.5rem; }
-      .hero h1 { font-size: 1.8rem; }
-      .section-title { font-size: 1.6rem; }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Clean Header - Hamburger on RIGHT -->
-  <header>
-    <div class="container header-inner">
-      <div class="logo">
-        <img src="https://raw.githubusercontent.com/benjamins123/amazonrealtygrp/7387b668d8da20b44bc74be931c4715804faf11f/image%20(
+      background: linear-gradient(rgba(0,0
