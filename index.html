@@ -11,11 +11,11 @@
 
   <style>
     :root {
-      --navy: #0a1d37;
-      --gold: #d4af37;
+      --violet: #6a1b9a;
+      --black: #000000;
+      --silver: #e0e0e0;
       --light: #f8f9fa;
-      --gray: #6c757d;
-      --transition: all 0.3s ease;
+      --transition: all 0.2s ease;
     }
 
     * {
@@ -31,8 +31,8 @@
       background: #fff;
     }
 
-    a { color: var(--gold); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    a { color: var(--violet); text-decoration: none; }
+    a:hover { color: #7e57c2; }
 
     .container {
       width: 90%;
@@ -41,299 +41,280 @@
       padding: 0 1rem;
     }
 
-    /* === COMPACT & STICKY HEADER === */
+    /* === ULTRA-MINIMAL HEADER === */
     header {
-      background: var(--navy);
+      background: var(--black);
       color: white;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      padding: 0.75rem 0;
-      transition: var(--transition);
+      height: 50px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
     }
 
     .header-inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
+      width: 100%;
     }
 
     .logo {
-      font-size: 1.3rem;
-      font-weight: 700;
-      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      font-size: 1.1rem;
+      font-weight: 600;
     }
 
-    .logo span { color: var(--gold); }
-
-    .contact-info {
-      font-size: 0.8rem;
-      line-height: 1.4;
-      text-align: right;
-      display: none; /* Hidden on mobile */
+    .logo img {
+      height: 32px;
+      width: auto;
+      margin-right: 8px;
     }
 
-    .contact-info a { color: white; }
-    .contact-info a:hover { color: var(--gold); }
+    .logo span {
+      color: var(--violet);
+    }
 
-    /* Desktop Nav */
+    /* Desktop Nav - Compact */
     .nav-desktop {
       display: flex;
-      gap: 1.5rem;
+      gap: 1.2rem;
     }
 
     .nav-desktop a {
-      color: white;
+      color: #ccc;
+      font-size: 0.85rem;
       font-weight: 500;
-      font-size: 0.9rem;
-      padding: 0.3rem 0;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 4px 0;
+      transition: var(--transition);
     }
 
-    /* Mobile Menu Toggle */
+    .nav-desktop a:hover {
+      color: white;
+    }
+
+    /* Mobile Menu */
     .menu-toggle {
       display: none;
       background: none;
       border: none;
       color: white;
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       cursor: pointer;
     }
 
     .nav-mobile {
       display: none;
       position: absolute;
-      top: 100%;
+      top: 50px;
       left: 0;
       width: 100%;
-      background: var(--navy);
-      padding: 1rem 0;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      background: var(--black);
+      padding: 0.5rem 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
 
     .nav-mobile a {
       display: block;
-      color: white;
-      padding: 0.75rem 1.5rem;
+      color: #ddd;
+      font-size: 0.9rem;
+      padding: 0.6rem 1.5rem;
       font-weight: 500;
+    }
+
+    .nav-mobile a:hover {
+      background: rgba(106, 27, 154, 0.2);
+      color: white;
     }
 
     /* === HERO === */
     .hero {
-      background: linear-gradient(rgba(10,29,55,0.85), rgba(10,29,55,0.85)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
       color: white;
       text-align: center;
-      padding: 5rem 1rem;
+      padding: 4.5rem 1rem 3rem;
     }
 
     .hero h1 {
-      font-size: 2.2rem;
-      margin-bottom: 0.8rem;
+      font-size: 2.1rem;
+      margin-bottom: 0.6rem;
       font-weight: 700;
     }
 
     .hero p {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       max-width: 700px;
-      margin: 0 auto 1.5rem;
+      margin: 0 auto 1.2rem;
+      opacity: 0.95;
     }
 
     .btn {
       display: inline-block;
-      background: var(--gold);
-      color: var(--navy);
-      padding: 0.8rem 1.8rem;
+      background: var(--violet);
+      color: white;
+      padding: 0.7rem 1.6rem;
       border-radius: 4px;
       font-weight: 600;
+      font-size: 0.95rem;
       transition: var(--transition);
     }
 
     .btn:hover {
-      background: #e0c567;
-      transform: translateY(-2px);
+      background: #7e57c2;
+      transform: translateY(-1px);
     }
 
     /* === SECTIONS === */
     section {
-      padding: 3.5rem 0;
+      padding: 3rem 0;
     }
 
     .section-title {
       text-align: center;
-      font-size: 1.9rem;
-      margin-bottom: 2.5rem;
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+      color: var(--black);
       position: relative;
     }
 
     .section-title:after {
       content: '';
-      width: 50px;
-      height: 3px;
-      background: var(--gold);
+      width: 40px;
+      height: 2px;
+      background: var(--violet);
       display: block;
-      margin: 0.8rem auto 0;
+      margin: 0.6rem auto 0;
     }
 
     /* About */
     .about-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
       max-width: 800px;
       margin: 0 auto;
     }
 
     .about-text p {
-      margin-bottom: 1.2rem;
-      font-size: 1.02rem;
+      margin-bottom: 1rem;
+      font-size: 1rem;
       color: #444;
     }
 
     /* Services */
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.2rem;
     }
 
     .service-card {
       background: white;
-      padding: 1.8rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      transition: transform 0.3s;
+      padding: 1.5rem;
+      border-radius: 6px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+      border: 1px solid #eee;
+      transition: transform 0.2s;
     }
 
     .service-card:hover {
-      transform: translateY(-6px);
+      transform: translateY(-4px);
     }
 
     .service-card h3 {
-      color: var(--navy);
-      margin-bottom: 0.9rem;
-      font-size: 1.2rem;
+      color: var(--violet);
+      margin-bottom: 0.7rem;
+      font-size: 1.1rem;
     }
 
     .service-card ul {
       list-style: none;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       color: #555;
     }
 
     .service-card li {
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.3rem;
       position: relative;
-      padding-left:... 1.2rem;
+      padding-left: 1rem;
     }
 
     .service-card li:before {
       content: "•";
-      color: var(--gold);
+      color: var(--violet);
       position: absolute;
       left: 0;
+      font-weight: bold;
     }
 
     /* Portfolio */
     .portfolio {
-      background: var(--light);
+      background: var(--silver);
     }
 
     .portfolio-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.2rem;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
     }
 
     .portfolio-item {
       background: white;
-      padding: 1.2rem;
+      padding: 1rem;
       border-radius: 6px;
       text-align: center;
+      font-size: 0.9rem;
       font-weight: 500;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
     }
 
     /* Contact */
     .contact {
-      background: var(--navy);
+      background: var(--black);
       color: white;
-      padding: 3.5rem 0;
     }
 
-    .contact-form-container {
-      max-width: 700px;
-      margin: 0 auto;
-      text-align: center;
-    }
+    .contact .section-title { color: white; }
+    .contact .section-title:after { background: var(--violet); }
 
     /* Footer */
     footer {
-      background: #111;
-      color: #aaa;
+      background: var(--black);
+      color: #999;
       text-align: center;
-      padding: 1.5rem 0;
-      font-size: 0.85rem;
+      padding: 1.2rem 0;
+      font-size: 0.8rem;
     }
 
-    /* === MOBILE RESPONSIVE === */
+    /* === MOBILE === */
     @media (max-width: 768px) {
-      .header-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .contact-info {
-        display: none;
-      }
-
-      .nav-desktop {
-        display: none;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-
-      .nav-mobile.show {
-        display: block;
-      }
-
-      .hero {
-        padding: 3.5rem 1rem;
-      }
-
-      .hero h1 {
-        font-size: 1.9rem;
-      }
-
-      .section-title {
-        font-size: 1.7rem;
-      }
+      header { height: 48px; }
+      .logo { font-size: 1rem; }
+      .logo img { height: 28px; margin-right: 6px; }
+      .nav-desktop { display: none; }
+      .menu-toggle { display: block; }
+      .hero { padding: 3rem 1rem 2.5rem; }
+      .hero h1 { font-size: 1.8rem; }
+      .section-title { font-size: 1.6rem; }
     }
 
     @media (min-width: 769px) {
-      .contact-info {
-        display: block;
-      }
+      .contact-info { display: none; } /* Optional: hide on desktop too */
     }
   </style>
 </head>
 <body>
 
-  <!-- Compact Sticky Header -->
+  <!-- Ultra-Clean Header -->
   <header>
     <div class="container header-inner">
-      <div class="logo">Amazon <span>Realty Group</span></div>
-      
-      <div class="contact-info">
-        Clara Sokol<br>
-        153 East 3rd Street, New York, NY 10009<br>
-        <a href="mailto:amazonrealtygrp@gmail.com">amazonrealtygrp@gmail.com</a>
+      <div class="logo">
+        <img src="logo.png" alt="Amazon Realty Group">
+        Amazon <span>Realty Group</span>
       </div>
 
-      <!-- Desktop Nav -->
       <nav class="nav-desktop">
         <a href="#services">Services</a>
         <a href="#portfolio">Portfolio</a>
@@ -341,11 +322,9 @@
         <a href="#contact">Contact</a>
       </nav>
 
-      <!-- Mobile Menu Toggle -->
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     </div>
 
-    <!-- Mobile Nav -->
     <nav class="nav-mobile" id="mobileNav">
       <a href="#services">Services</a>
       <a href="#portfolio">Portfolio</a>
@@ -430,7 +409,7 @@
   <section id="portfolio" class="portfolio">
     <div class="container">
       <h2 class="section-title">Managed Portfolio</h2>
-      <p style="text-align:center; margin-bottom:2rem; max-width:800px; margin-left:auto; margin-right:auto;">
+      <p style="text-align:center; margin-bottom:1.5rem; max-width:800px; margin-left:auto; margin-right:auto; font-size:0.95rem;">
         We manage a diverse mix of residential and commercial properties across Manhattan and Brooklyn. All references available.
       </p>
       <div class="portfolio-grid">
@@ -464,8 +443,8 @@
         <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
         <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-253014422760043']", "https://form.jotform.com/")</script>
       </div>
-      <p style="text-align:center; margin-top:1.5rem; color:#ccc;">
-        Or email: <a href="mailto:amazonrealtygrp@gmail.com" style="color:var(--gold);">amazonrealtygrp@gmail.com</a>
+      <p style="text-align:center; margin-top:1.2rem; color:#bbb; font-size:0.9rem;">
+        Or email: <a href="mailto:amazonrealtygrp@gmail.com" style="color:var(--violet);">amazonrealtygrp@gmail.com</a>
       </p>
     </div>
   </section>
@@ -481,10 +460,9 @@
   <!-- Mobile Menu Script -->
   <script>
     function toggleMenu() {
-      document.getElementById('mobileNav').classList.toggle('show');
+      const nav = document.getElementById('mobileNav');
+      nav.classList.toggle('show');
     }
-
-    // Close menu when clicking a link
     document.querySelectorAll('.nav-mobile a').forEach(link => {
       link.addEventListener('click', () => {
         document.getElementById('mobileNav').classList.remove('show');
