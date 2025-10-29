@@ -41,7 +41,7 @@
       padding: 0 1rem;
     }
 
-    /* === ULTRA-MINIMAL HEADER === */
+    /* === ULTRA-CLEAN HEADER === */
     header {
       background: var(--black);
       color: white;
@@ -66,6 +66,7 @@
       align-items: center;
       font-size: 1.1rem;
       font-weight: 600;
+      color: white;
     }
 
     .logo img {
@@ -78,7 +79,7 @@
       color: var(--violet);
     }
 
-    /* Desktop Nav - Compact */
+    /* Desktop Nav */
     .nav-desktop {
       display: flex;
       gap: 1.2rem;
@@ -98,7 +99,7 @@
       color: white;
     }
 
-    /* Mobile Menu */
+    /* Mobile Menu Toggle - ON THE RIGHT */
     .menu-toggle {
       display: none;
       background: none;
@@ -215,7 +216,7 @@
       padding: 1.5rem;
       border-radius: 6px;
       box-shadow: 0 3px 10px rgba(0,0,0,0.04);
-      border: 1px solid #eee;
+      border: 1px solid var(--silver);
       transition: transform 0.2s;
     }
 
@@ -299,15 +300,11 @@
       .hero h1 { font-size: 1.8rem; }
       .section-title { font-size: 1.6rem; }
     }
-
-    @media (min-width: 769px) {
-      .contact-info { display: none; } /* Optional: hide on desktop too */
-    }
   </style>
 </head>
 <body>
 
-  <!-- Ultra-Clean Header -->
+  <!-- Clean Header - Hamburger on RIGHT -->
   <header>
     <div class="container header-inner">
       <div class="logo">
@@ -315,6 +312,7 @@
         Amazon <span>Realty Group</span>
       </div>
 
+      <!-- Desktop Nav -->
       <nav class="nav-desktop">
         <a href="#services">Services</a>
         <a href="#portfolio">Portfolio</a>
@@ -322,9 +320,11 @@
         <a href="#contact">Contact</a>
       </nav>
 
+      <!-- Hamburger on RIGHT -->
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     </div>
 
+    <!-- Mobile Menu -->
     <nav class="nav-mobile" id="mobileNav">
       <a href="#services">Services</a>
       <a href="#portfolio">Portfolio</a>
